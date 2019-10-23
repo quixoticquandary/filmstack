@@ -1,0 +1,60 @@
+<!-- 
+load static acts as a delimiter to load
+all of the static files in the static folder
+-->
+<!--
+    resuse a base HTML file if needed
+     {% extends 'mysite/base.html' %}
+
+     HEROKU URL:
+     https://ancient-citadel-95323.herokuapp.com/
+     remote git repo:
+     https://git.heroku.com/ancient-citadel-95323.git
+     
+-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- meta tags to help make the site responsive -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- primary stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'mysite/css/main.css' %}">
+
+    <!-- general site details -->
+    <title>Home | filmstack</title>
+    <link rel="icon" href="{% static 'mysite/images/favicon.ico' %}">
+
+</head>
+
+<body>
+
+    <!--NAVIGATION-->
+    <div class="topnav" id="myTopnav">
+        <a href="{% url 'filmstack' %}">filmstack</a>
+        <a href="#search">Search</a>
+        <a href="{% url 'login' %}">Signup / Login</a>
+    </div>
+
+    <h1>HOOPLA</h1>
+    <img src="{% static 'mysite/images/Yuni-Yoshida-1.jpg' %}">
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+        sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+        nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+        aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
+        felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+        eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+        dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+        rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque
+        sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
+        tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+        faucibus tincidunt.
+    </p>
+</body>
+
+</html>
